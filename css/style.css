@@ -1,0 +1,146 @@
+*{
+    border: 0;
+    padding: 0;
+    margin: 0;
+    font-family: 'Staatliches', cursive;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.menu{ 
+    margin:auto;
+    position: fixed;
+    float: right;
+    padding-left: 1600px;
+}
+
+ul{
+    float: right;
+    list-style-type: none;
+    margin-top: 25px;
+}
+
+ul li{
+    display:inline-block;
+}
+
+ul li a{
+    text-decoration:none;
+    color: #fff;
+    padding: 5px 30px;
+    border: 1px solid transparent;
+    transition: 0.6s ease;
+}
+
+ul li a:hover{
+    background-color: #fff;
+    color: #222;
+}
+
+.logo img{
+    float: left;
+    width: 75px;
+    height: auto;
+    padding-left: 25px;
+    padding-top: 25px;
+}
+
+
+ul li.active a{
+    background-color: #fff;
+    color: #222;
+}
+
+.title{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+
+.title h1{
+    color: #49708E;
+    font-size: 70px;
+    
+}
+
+.title h2{
+    color: rgb(223, 217, 217);
+    font-size: 30px;
+    font-family: 'Share', cursive;
+    position:absolute;
+    padding-left: 100px;
+}
+
+
+.arrow{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%,-90%);
+}
+.arrow span{
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-bottom: 5px solid #fff;
+    border-right: 5px solid #fff;
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: animate 2s infinite;
+}
+.arrow span:nth-child(2){
+    animation-delay: -0.2s;
+}
+.arrow span:nth-child(3){
+    animation-delay: -0.4s;
+}
+@keyframes animate {
+    0%{
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px,-20px);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: rotate(45deg) translate(20px,20px);
+    }
+}
+
+#pagina1{
+    height: 100vh;
+    width: 100vw;
+    background-color: #222;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 700px 200px;
+}
+
+#pagina2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    height: 100vh;
+    background-color: #49708E;
+}
+
+#pagina2 p{
+    color: #fff;
+    text-align: justify;
+    grid-area: 2/4/4/5;
+}
+
+#pagina3{
+    height: 100vh;
+    background-color: black;
+}
+
+#pagina4{
+    height: 100vh;
+    background-color: rgb(194, 43, 43);
+}
