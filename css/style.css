@@ -13,9 +13,12 @@ html{
     margin:auto;
     position: fixed;
     float: right;
-    padding-left: 1600px;
+    padding-left: 800px;
 }
 
+.logo{
+    grid-area: 1/1/2/2;
+}
 ul{
     float: right;
     list-style-type: none;
