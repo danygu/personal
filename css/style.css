@@ -235,7 +235,7 @@ ul li.active a{
 
 #pagina2{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(7, 1fr);
     grid-template-rows: 1fr 1fr 1fr 1fr;
     height: 100vh;
     background-color: #49708E;
@@ -257,3 +257,31 @@ ul li.active a{
     background-color: rgb(194, 43, 43);
 }
 
+.uno{
+    background-color: #222;
+    grid-area: 1/1/5/3;
+}
+
+/* TEXTO ANIMADO ACERCA DE */
+@-webkit-keyframes typing { from { width: 0; } }
+@-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
+
+.text-js { 
+    animation-delay: 3s;
+    grid-column: 2/4;
+    grid-row: 1/2;
+    text-align: center;
+    font-size: 3em;
+    color: #fff;
+	border-right: .1em solid white;
+	width: 16.5em; 
+	width: 21ch;
+	margin: 2em 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	-webkit-animation: typing 2s steps(21, end),
+	           blink-caret .5s step-end infinite alternate;
+}
+  
+
+  
