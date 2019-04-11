@@ -3,6 +3,7 @@
     padding: 0;
     margin: 0;
     font-family: 'Staatliches', cursive;
+    box-sizing: border-box;
 }
 
 html{
@@ -10,11 +11,114 @@ html{
 }
 
 .menu{ 
-    margin:auto;
+    color: #fff;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 15px;
+    padding: 0 30px;
     position: fixed;
-    float: right;
-    padding-left: 800px;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    
+   /* padding-left: 65%;
+    padding: 0 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    float: left; */
 }
+.menu a.menu-brand {
+    float: left;
+    height: inherit;
+    line-height: inherit;
+    padding: 0 30px;
+    letter-spacing: 2px;
+  }
+
+@media (max-width: 991px) {
+    .menu ul {
+      padding: 0 10px;
+    }
+    .menu ul li a {
+      min-width: 100px;
+      padding: 0 20px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .menu {
+      padding: 0;
+    }
+    .menu ul {
+      width: 100%;
+      padding: 0;
+      /* height: auto; */
+      height: 100vh;
+      max-height: 0;
+      overflow: hidden;
+      transition: all ease-in-out 0.3s;
+    }
+    .menu ul.open {
+      max-height: 100vh;
+    }
+    .menu ul li {
+      width: 100%;
+      /* border-bottom: 1px solid rgba(255,255,255,0.3); */
+    }
+    .menu ul li a {
+      padding: 0;
+    }
+    .menu .menu-toggler {
+      display: block;
+      position: absolute;
+      height: 40px;
+      top: 20px;
+      right: 20px;
+      background-color: transparent;
+      color: #fff;
+      border: 3px solid #fff;
+      /* border: none; */
+      /* border-radius: 4px; */
+      outline: none;
+      padding: 0 5px;
+      cursor: pointer;
+    }
+    .menu .menu-toggler span,
+    .menu .menu-toggler span::before,
+    .menu .menu-toggler span::after {
+      display: block;
+      content: '';
+      background-color: #fff;
+      height: 3px;
+      width: 28px;
+      border-radius: 4px;
+      transition: all ease-in-out 0.3s;
+    }
+    .menu .menu-toggler span::before {
+      transform: translateY(-8px);
+    }
+    .menu .menu-toggler span::after {
+      transform: translateY(5px);
+    }
+    
+    .menu .menu-toggler.open-menu-toggler span {
+      /* transform: rotate(90deg); */
+      background-color: transparent;
+      /* transform: scale(0.85) rotate(270deg); */
+    }
+    .menu .menu-toggler.open-menu-toggler span::before {
+      transform: translateY(0px) rotate(45deg);
+      /* transform: translateY(0px) scale(0.75) rotate(45deg); */
+    }
+    .menu .menu-toggler.open-menu-toggler span::after {
+      transform: translateY(-3px) rotate(-45deg);
+      /* transform: translateY(-3px) scale(0.75) rotate(-45deg); */
+    }
+  }
+
 
 .logo{
     grid-area: 1/1/2/2;
@@ -23,6 +127,7 @@ ul{
     float: right;
     list-style-type: none;
     margin-top: 25px;
+    padding: 0 50px;
 }
 
 ul li{
@@ -30,12 +135,17 @@ ul li{
 }
 
 ul li a{
+    display: block;
     text-decoration:none;
     color: #fff;
+    /* padding: 0 30px; */
     padding: 5px 30px;
     border: 1px solid transparent;
     transition: 0.6s ease;
 }
+.menu .menu-toggler {
+    display: none;
+  }
 
 ul li a:hover{
     background-color: #fff;
@@ -57,10 +167,9 @@ ul li.active a{
 }
 
 .title{
-    position:absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    grid-area: 2/2/3/3;
+    justify-self: center;
+    align-self: center;
     
 }
 
@@ -80,10 +189,10 @@ ul li.active a{
 
 
 .arrow{
-    position: absolute;
-    top: 90%;
-    left: 50%;
-    transform: translate(-50%,-90%);
+    grid-area: 3/2/4/3;
+    justify-self: center;
+    align-self: end;
+    padding-bottom: 60px;
 }
 .arrow span{
     display: block;
@@ -147,3 +256,4 @@ ul li.active a{
     height: 100vh;
     background-color: rgb(194, 43, 43);
 }
+
