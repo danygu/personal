@@ -22,5 +22,9 @@ function autoType(elementClass, typingSpeed){
           },i*typingSpeed);
         })(i+1,text[i]);
       }
-    },1500);
+    },8000);
   }
+
+  $(document).ready(function(){
+    autoType(".type-js",200);
+  });
