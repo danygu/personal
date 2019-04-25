@@ -174,6 +174,7 @@ ul li.active a{
 }
 
 .title h1{
+    text-align: center;
     color: #49708E;
     font-size: 70px;
     
@@ -184,7 +185,8 @@ ul li.active a{
     font-size: 30px;
     font-family: 'Share', cursive;
     position:absolute;
-    padding-left: 100px;
+    text-align: center;
+    padding-left: 80px;
 }
 
 
@@ -230,7 +232,8 @@ ul li.active a{
     background-color: #222;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 100px 700px 200px;
+    grid-template-rows: 1fr 1fr 1fr;
+    /* grid-template-rows: 100px 700px 200px; */
 }
 
 #pagina2{
@@ -268,26 +271,27 @@ ul li.active a{
     justify-self: center;
 }
 /* TEXTO ANIMADO ACERCA DE */
-@-webkit-keyframes typing { from { width: 0; } }
-@-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
+/* @-webkit-keyframes typing { from { width: 0; } }
+@-webkit-keyframes blink-caret { 50% { border-color: transparent; } } */
 
 .text-js { 
-    animation-delay: 10s;
+    /* animation-delay: 10s; */
     z-index: 10;
     grid-column: 2/4;
     grid-row: 1/2;
     text-align: center;
     text-justify: center;
-    font-size: 4em;
+    font-size: 3em;
     color: #fff;
-	border-right: .1em solid white;
+    padding-top: 25px;
+	/* border-right: .1em solid white;
 	width: 16.5em; 
 	width: 21ch;
 	margin: 2em 1em;
 	white-space: nowrap;
 	overflow: hidden;
 	-webkit-animation: typing 2s steps(21, end),
-	           blink-caret .5s step-end infinite alternate;
+	           blink-caret .5s step-end infinite alternate; */
 }
   
 
@@ -299,42 +303,44 @@ ul li.active a{
 .container {
     padding: 50px 0;
     text-align: center;
-    grid-area: 3/4/5/7;
+    grid-area: 3/4/5/8;
   }
   
   .chart {
     position: relative;
-    display: inline-block;
+    /* display: inline-block; */
     color: #999;
     font-size: 20px;
     text-align: center;
   }
   
   .chart figcaption {
-    padding: 50px 25px;
-    width: 100px;
-    height: 50px;
-    border: 20px solid #f0f0f0;
+    padding: 55px 55px;
+    width: 90px;
+    height: 40px;
+    border: 20px solid #89aabe;
     border-radius: 100px;
     line-height: 50px;
   }
   
   .chart img {
     position: absolute;
-    max-width: 100px;
-    max-height: 100px;
+    max-width: 90px;
+    max-height: 90px;
     background: white;
   }
   /* END Container styles */
   
   /* Colors for the circles and positions for the graphics */
-  .html {
-    top: 50px;
-    left: 45px;
+  .ai {
+    top: 45px;
+    left: 50px;
+    width: 70px;
+    height: 70px;
   }
   
-  .html + svg .outer {
-    stroke: #e34f26;
+  .ai + svg .outer {
+    stroke: #FB7C00;
   }
   
   .css {
