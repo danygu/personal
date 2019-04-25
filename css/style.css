@@ -3,7 +3,7 @@
     padding: 0;
     margin: 0;
     font-family: 'Staatliches', cursive;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 
 html{
@@ -238,7 +238,7 @@ ul li.active a{
 
 #pagina2{
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(8, 1fr);
     grid-template-rows: 1fr 1fr 1fr 1fr;
     height: 100vh;
     background-color: #49708E;
@@ -247,7 +247,11 @@ ul li.active a{
 #pagina2 p{
     color: #fff;
     text-align: justify;
-    grid-area: 2/5/4/7;
+    grid-area: 3/2/5/4;
+    text-justify: center;
+    align-self: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5em;
 }
 
 #pagina3{
@@ -281,9 +285,9 @@ ul li.active a{
     grid-row: 1/2;
     text-align: center;
     text-justify: center;
-    font-size: 3em;
+    font-size: 3.5em;
     color: #fff;
-    padding-top: 25px;
+    padding-top: 45px;
 	/* border-right: .1em solid white;
 	width: 16.5em; 
 	width: 21ch;
@@ -296,28 +300,29 @@ ul li.active a{
   
 
 
-
-
-
 /* Animación cositas */
 .container {
     padding: 50px 0;
     text-align: center;
-    grid-area: 3/4/5/8;
-  }
+    grid-area: 2/4/4/8;
+    font-size: 10em;
+    font-family: arial;
+    align-content: center;
+    justify-content: center;
+  } 
   
   .chart {
     position: relative;
-    /* display: inline-block; */
+    display: inline-block;
     color: #999;
     font-size: 20px;
     text-align: center;
   }
   
   .chart figcaption {
-    padding: 55px 55px;
-    width: 90px;
-    height: 40px;
+    padding: 50px 25px;
+    width: 100px;
+    height: 50px;
     border: 20px solid #89aabe;
     border-radius: 100px;
     line-height: 50px;
@@ -327,51 +332,50 @@ ul li.active a{
     position: absolute;
     max-width: 90px;
     max-height: 90px;
-    background: white;
   }
-  /* END Container styles */
+  /* END Container styles
   
   /* Colors for the circles and positions for the graphics */
   .ai {
-    top: 45px;
+    top: 50px;
     left: 50px;
-    width: 70px;
-    height: 70px;
+    /* width: 70px;
+    height: 70px; */
   }
   
   .ai + svg .outer {
     stroke: #FB7C00;
   }
   
-  .css {
+  .ps {
     top: 55px;
     left: 48px;
   }
   
-  .css + svg .outer {
-    stroke: #0d84ce;
+  .ps + svg .outer {
+    stroke: #00C8FF;
   }
   
-  .javascript {
+  .id {
     max-width: 90px;
     max-height: 90px;
-    top: 45px;
-    left: 45px;
+    top: 50px;
+    left: 50px;
   }
   
-  .javascript + svg .outer {
-    stroke: #f0e040;
+  .id + svg .outer {
+    stroke: #FF408C;
   }
   
-  .node {
+  .max {
     width: 200px;
     height: 200px;
-    top: 45px;
-    left: 45px;
+    top: 50px;
+    left: 50px;
   }
   
-  .node + svg .outer {
-    stroke: #83cd29;
+  .max + svg .outer {
+    stroke: #008989;
   }
   
   .chart svg {
