@@ -10,7 +10,7 @@ html{
     scroll-behavior: smooth;
 }
 
-.menu{ 
+.navbar{ 
     color: #fff;
     width: 100%;
     height: 30px;
@@ -30,7 +30,7 @@ html{
     z-index: 10;
     float: left; */
 }
-.menu a.menu-brand {
+.navbar a.navbar-brand {
     float: left;
     height: inherit;
     line-height: inherit;
@@ -39,39 +39,41 @@ html{
   }
 
 @media (max-width: 991px) {
-    .menu ul {
+    .navbar ul {
       padding: 0 10px;
     }
-    .menu ul li a {
+    .navbar ul li a {
       min-width: 100px;
       padding: 0 20px;
     }
   }
 
   @media (max-width: 767px) {
-    .menu {
+    .navbar{
       padding: 0;
     }
-    .menu ul {
+    .navbar ul {
       width: 100%;
       padding: 0;
+      background-color: #222; 
       /* height: auto; */
       height: 100vh;
-      max-height: 0;
+      max-height: 0 ;
       overflow: hidden;
       transition: all ease-in-out 0.3s;
+      
     }
-    .menu ul.open {
+    .navbar ul.open {
       max-height: 100vh;
     }
-    .menu ul li {
+    .navbar ul li {
       width: 100%;
       /* border-bottom: 1px solid rgba(255,255,255,0.3); */
     }
-    .menu ul li a {
+    .navbar ul li a {
       padding: 0;
     }
-    .menu .menu-toggler {
+    .navbar .navbar-toggler {
       display: block;
       position: absolute;
       height: 40px;
@@ -86,9 +88,9 @@ html{
       padding: 0 5px;
       cursor: pointer;
     }
-    .menu .menu-toggler span,
-    .menu .menu-toggler span::before,
-    .menu .menu-toggler span::after {
+    .navbar .navbar-toggler span,
+    .navbar .navbar-toggler span::before,
+    .navbar .navbar-toggler span::after{
       display: block;
       content: '';
       background-color: #fff;
@@ -97,27 +99,38 @@ html{
       border-radius: 4px;
       transition: all ease-in-out 0.3s;
     }
-    .menu .menu-toggler span::before {
+    .navbar .navbar-toggler span::before {
       transform: translateY(-8px);
-    }
-    .menu .menu-toggler span::after {
+  }
+  .navbar .navbar-toggler span::after {
       transform: translateY(5px);
     }
     
-    .menu .menu-toggler.open-menu-toggler span {
+    .navbar .navbar-toggler.open-navbar-toggler span {
       /* transform: rotate(90deg); */
       background-color: transparent;
       /* transform: scale(0.85) rotate(270deg); */
     }
-    .menu .menu-toggler.open-menu-toggler span::before {
+    .navbar .navbar-toggler.open-navbar-toggler span::before {
       transform: translateY(0px) rotate(45deg);
       /* transform: translateY(0px) scale(0.75) rotate(45deg); */
     }
-    .menu .menu-toggler.open-menu-toggler span::after {
+    .navbar .navbar-toggler.open-navbar-toggler span::after {
       transform: translateY(-3px) rotate(-45deg);
       /* transform: translateY(-3px) scale(0.75) rotate(-45deg); */
     }
+
+    #pagina1 h1{
+      width: 100%;
+      padding: 0;
+    }
+
+    #pagina4{
+      width: 100%;
+    }
   }
+
+/*FIN DEL MENU DE HAMBURGUESA*/
 
 
 .logo{
@@ -192,7 +205,7 @@ ul li.active a{
     padding-left: 80px;
 }
 
-
+/*FLECHAS*/
 .arrow{
     grid-area: 3/2/4/3;
     justify-self: center;
@@ -228,6 +241,7 @@ ul li.active a{
         transform: rotate(45deg) translate(20px,20px);
     }
 }
+/*FIN FLECHAS*/
 
 #pagina1{
     height: 100vh;
@@ -244,17 +258,18 @@ ul li.active a{
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: 1fr 1fr 1fr 1fr;
     height: 100vh;
+    width: 100vw;
     background-color: #49708E;
 }
 
 #pagina2 p{
     color: #fff;
     text-align: justify;
-    grid-area: 2/5/3/7;
+    grid-area: 2/5/3/8;
     text-justify: center;
     align-self: center;
     font-family: 'Lato', sans-serif;
-    font-size: 1.5em;
+    font-size: 1em;
 }
 
 #pagina3{
@@ -267,6 +282,7 @@ ul li.active a{
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(6, 1fr);
     height: 100vh;
+    width: 100vw;
     background-color: #A1ACB3;
 }
 
@@ -279,6 +295,7 @@ ul li.active a{
     grid-area: 2/2/4/4;
     align-content: center;
     justify-self: center;
+    height: 245px;
 }
 /* TEXTO ANIMADO ACERCA DE */
 /* @-webkit-keyframes typing { from { width: 0; } }
@@ -521,6 +538,8 @@ ul li.active a{
   /*Contact*/
   .contactanos{
     grid-area: 2/4/7/6;
+    /* height: 40px;
+    width: 30px; */
   }
 
   .redes{
@@ -543,7 +562,7 @@ ul li.active a{
   }
   #pagina4 h1 {
     font-weight: 600;
-    font-size: 72px;
+    font-size: 50px;
     color: white;
     text-align: center;
     grid-area: 2/3/7/5;
