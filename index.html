@@ -55,36 +55,36 @@
     <p>Mi nombre es Daniela Gutiérrez, estudio Diseño Multimedia en la Universidad Anáhuac.
     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, commodi? Praesentium consequuntur vel maiores architecto dolores ipsa dolore ex repudiandae officiis, rem, aut molestias eum harum magnam assumenda ad qui?
     </p>
-    <img src="images/dany_.png" alt="">
+    <img class="dany" src="images/dany_.png" alt="">
     
     <section class="container">
   
         
         <!-- AI Chart -->
         <figure class="chart" data-percent="75">
-          <figcaption>Illustrator</figcaption>
+          <figcaption>AI</figcaption>
            <img class="ai" src="images/illustator.png">
           <svg width="200" height="200">
-            <circle class="outer" cx="95" cy="95" r="85" transform="rotate(-90, 95, 95)"/>
+            <circle class="outer" cx="121" cy="72" r="60" transform="rotate(-90, 95, 95)"/>
           </svg>
         </figure>
         
         <!-- PS Chart -->
         <figure class="chart" data-percent="75">
-          <figcaption>Photoshop</figcaption>
+          <figcaption>Ps</figcaption>
           <img class="ps" src="images/photoshop.png">
           <svg width="200" height="200">
-            <circle class="outer" cx="95" cy="95" r="85" transform="rotate(-90, 95, 95)"/>
+            <circle class="outer" cx="121" cy="72" r="60" transform="rotate(-90, 95, 95)"/>
           </svg>
         </figure>
         
         
         <!-- ID Chart -->
         <figure class="chart" data-percent="50">
-          <figcaption>InDesign</figcaption>
+          <figcaption>ID</figcaption>
           <img class="id" src="images/indesign.png">
           <svg width="200" height="200">
-            <circle class="outer" cx="95" cy="95" r="85" transform="rotate(-90, 95, 95)"/>
+            <circle class="outer" cx="121" cy="72" r="60" transform="rotate(-90, 95, 95)"/>
           </svg>
         </figure>
         
@@ -93,7 +93,7 @@
           <figcaption>3ds Max</figcaption>
           <img class="max" src="images/3ds.png">
           <svg width="200" height="200">
-            <circle class="outer" cx="95" cy="95" r="85" transform="rotate(-90, 95, 95)"/>
+            <circle class="outer" cx="121" cy="72" r="60" transform="rotate(-90, 95, 95)"/>
           </svg>
         </figure>
       </section>
@@ -115,42 +115,27 @@
             <p>danygtz11.97@gmail.com</p>
         </div>
     </div>
-<div class="contactanos">
-    <div class="row">
-        <h1>contacto</h1>
-    </div>
-    <div class="row">
-            <h4 style="text-align:center">Queremos saber de ti</h4>
-    </div>
-    <div class="row input-container">
-            <div class="col-xs-12">
-                <div class="styled-input wide">
-                    <input type="text" required />
-                    <label>Nombre</label> 
-                </div>
-            </div>
-            <div class="col-md-6 col-sm-12">
-                <div class="styled-input">
-                    <input type="text" required />
-                    <label>Email</label> 
-                </div>
-            </div>
-            <div class="col-md-6 col-sm-12">
-                <div class="styled-input" style="float:right;">
-                    <input type="text" required />
-                    <label>Teléfono</label> 
-                </div>
-            </div>
-            <div class="col-xs-12">
-                <div class="styled-input wide">
-                    <textarea required></textarea>
-                    <label>Mensaje</label>
-                </div>
-            </div>
-            <div class="col-xs-12">
-                <div class="btn-lrg submit-btn">Enviar</div>
-            </div>
-    </div>
+    <div class="wrapper">
+		<div class="contact__container">
+				<div class="contact__title">
+						<h2>Contáctame<hr></h2>
+
+				</div>
+				<form class="contact__form">
+						<p>Nombre</p>
+						<input class="contact__form-input" type="text">
+
+						<p>Email</p>
+						<input class="contact__form-input" type="text">
+
+						<p>Mensaje</p>
+						<textarea class="contact__form-textarea" type="text"></textarea>
+
+						<input type="submit" value="Enviar mensaje">
+				</form>
+		</div>
+</div>
+
 </div>
 </div>
 <script src="js/web.js"></script>
