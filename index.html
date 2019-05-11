@@ -9,10 +9,23 @@
     <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <meta name="google-site-verification" content="nujTEZ8L2b6uz8vRU4Q0sJoLDbOYBAHBUv3JHjZO2mA">
-
+    <link id="page_favicon" href="images/favicon.ico" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="css/swiper.min.css">
 </head>
 <body>
-
+  <style>
+  .swiper-container {
+    width: 100%;
+    padding-top: 150px;
+    padding-bottom: 50px;
+  }
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+  }
+</style>
     <div class="navbar">
             <a id="home" class="smooth"></a>
         <ul>
@@ -22,6 +35,7 @@
             <li><a href="#pagina3">Trabajos</a></li>
             <li><a href="#pagina4">Contacto</a></li>
         </ul>
+        
         <button class="navbar-toggler">
                 <span></span>
         </button>
@@ -99,29 +113,50 @@
       </section>
 </div>
 
+
 <div id="pagina3">
     <a id="trabajos" class="smooth"></a>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background-image:url(images/f1.JPG)"></div>
+        <div class="swiper-slide" style="background-image:url(images/miles.jpg)"></div>
+        <div class="swiper-slide" style="background-image:url(images/f5.JPG)"></div>
+        <div class="swiper-slide" style="background-image:url(images/f7.JPG)"></div>
+        <div class="swiper-slide" style="background-image:url(images/joker.JPG"></div>
+        <div class="swiper-slide" style="background-image:url(images/spiderman.jpg)"></div>
+        <div class="swiper-slide" style="background-image:url(images/f4.JPG)"></div>
+        <div class="swiper-slide" style="background-image:url(images/f6.JPG)"></div>
+        <div class="swiper-slide" style="background-image:url(images/mario.jpg)"></div>
+        <div class="swiper-slide" style="background-image:url(images/stitch.jpg)"></div>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
 </div>
 
 <div id="pagina4">
     <a id="contacto" class="smooth"></a>
-    <div class="redes">
-        <div class="facebook">
-            <img src="images/facebook.png" alt="facebook">
-            <p>Dany Gtz</p>
-        </div>
+    <div class="facebook">
+      <img src="images/facebook.png" alt="facebook">
+      
+  </div>
+    <!-- <div class="redes"> -->
+      
         <div class="gmail">
             <img src="images/gmail.png" alt="gmail">
-            <p>danygtz11.97@gmail.com</p>
+            
         </div>
-    </div>
+    <!-- </div> -->
+    <p class="fb">Dany Gtz</p>
+    <p class="gm">danygtz11.97@gmail.com</p>
+    
     <div class="wrapper">
 		<div class="contact__container">
 				<div class="contact__title">
 						<h2>Contáctame<hr></h2>
 
 				</div>
-				<form class="contact__form">
+				<form class="contact__form" method="post" action="contactengine.php">
 						<p>Nombre</p>
 						<input class="contact__form-input" type="text">
 
@@ -139,8 +174,25 @@
 </div>
 </div>
 <script src="js/web.js"></script>
-<script src="js/text.js"></script>
-<!-- <script src="js/menu.js"></script> -->
 <script src="js/main.js"></script>
+<script src="js/swiper.min.js"></script>
+<script>
+  var swiper = new Swiper('.swiper-container', {
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    coverflowEffect: {
+      rotate: 50,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows : true,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  });
+</script>
 </body>
 </html>

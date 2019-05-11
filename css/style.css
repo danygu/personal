@@ -38,15 +38,6 @@ html{
     letter-spacing: 2px;
   }
 
-@media (max-width: 991px) {
-    .navbar ul {
-      padding: 0 10px;
-    }
-    .navbar ul li a {
-      min-width: 100px;
-      padding: 0 20px;
-    }
-  }
 
   
 
@@ -84,10 +75,18 @@ ul li a:hover{
     background-color: #fff;
     color: #222;
 }
-a.active{
+/* a.active{
   color: #fff;
-}
+} */
+.active, .navbar ul li a:hover  {
+  text-decoration: none;
+  /* line-height: 50px; */
+/* padding: 32px 40px; */
+padding: 5px 30px;
+background-color: #fff;
+color: #222;
 
+}
 .logo img{
     float: left;
     width: 75px;
@@ -194,7 +193,7 @@ ul li.active a{
 
 #pagina3{
     height: 100vh;
-    background-color: black;
+    background-color: #606D80;
 }
 
 #pagina4{
@@ -218,9 +217,6 @@ ul li.active a{
     height: 245px;
 }
 
-/* TEXTO ANIMADO ACERCA DE */
-/* @-webkit-keyframes typing { from { width: 0; } }
-@-webkit-keyframes blink-caret { 50% { border-color: transparent; } } */
 
 .text-js { 
     /* animation-delay: 10s; */
@@ -460,17 +456,7 @@ ul li.active a{
 
 
   /*Contact*/
-  /* h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-		font-family: 'Open Sans' sans-serif;
-		color: #FBFBFB;
-		margin: 0;
-} */
+
 .wrapper{
   grid-area: 2/4/5/6;
 }
@@ -481,9 +467,7 @@ p {
 		margin: 0 auto;
 		padding: 0 0 10px 10px;
 		max-width: 330px;
-    background-color: #2d2d2d;
-
-  
+    background-color: #2d2d2d; 
 }
 
 .contact__title {
@@ -570,21 +554,40 @@ input[type="button"]:hover {
 
   .redes{
     display: inline-block;
-    grid-area:  3/2/5/4;
+    grid-area:  3/2/5/3;
     align-self: center;
     justify-self: center;
   }
+  .facebook{
+    grid-area:  3/2/4/3;
+  }
+  .gmail{
+    grid-area:  4/2/5/3;
+  }
   .redes p{
     color: #555353;
+    float: right;
+  }
+  .fb{
+    color: #555353;
+    grid-area: 3/3/4/4;
+    padding: 60px 0;
+  }
+  .gm{
+    color: #555353;
+    grid-area: 4/3/5/4;
+    padding: 30px 0;
   }
   .facebook img{
     width: 70px;
     height: 52.5px;
+    padding: 50px 10px 0 150px;
   }
 
   .gmail img{
     width: 70px;
     height: 70px;
+    padding: 5px 10px 0 150px;
   }
   /* #pagina4 h1 {
     font-weight: 600;
@@ -601,7 +604,19 @@ input[type="button"]:hover {
     line-height: 1.5;
 } */
 
+/* GALLERY */
 
+/* END GALLERY */
+
+@media (max-width: 991px) {
+    .navbar ul {
+      padding: 0 10px;
+    }
+    .navbar ul li a {
+      min-width: 100px;
+      padding: 0 20px;
+    }
+  }
 
 @media (max-width: 767px) {
   .navbar{
@@ -722,8 +737,39 @@ input[type="button"]:hover {
   border-radius: 30px;
 }
 
-  #pagina4 .redes{
+  /* #pagina4 .redes{
     grid-area: 6/2/7/5;
+    display: inline-flex;
+  } */
+  #pagina4 .facebook {
+    width: 50px;
+    height: 37.5px;
+    grid-area: 6/2/7/3;
+    /* padding-top: 10px; */
+    padding: 0;
+  }
+  #pagina4 .facebook img{
+    padding: 30px 0px 5px 5px;
+  }
+  #pagina4 .gmail {
+    width: 50px;
+    height: 50px;
+    grid-area: 6/4/7/5;
+    padding: 0;
+  }
+  #pagina4 .gmail img{
+    grid-area: 6/4/7/5;
+    padding: 20px 10px 0px 5px;
+  }
+  #pagina4 .fb{
+    grid-area: 6/2/7/4;
+    font-size: .8rem;
+    padding: 100px 0px 5px 20px;
+  }
+  #pagina4 .gm{
+    grid-area: 6/4/7/6;
+    font-size: .8rem;
+    padding-top: 100px;
   }
   #pagina4 .contactanos{
     grid-area: 1/2/6/6;
@@ -735,7 +781,6 @@ input[type="button"]:hover {
 
   #pagina4 .wrapper{
     grid-area: 2/2/5/6;
-  
   }
 
 }
