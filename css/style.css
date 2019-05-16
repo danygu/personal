@@ -782,5 +782,8 @@ input[type="button"]:hover {
   #pagina4 .wrapper{
     grid-area: 2/2/5/6;
   }
+  #pagina2 .container{
+    opacity: 0;
+  }
 
 }
